@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- #id -->
+    <div id="id"></div> 
+    <!-- span.class -->
+    <span class="class"></span>
+    <!-- button[type=button] -->
+    <button type="button"></button>
+    <!-- [data-selected] div with that attribute is generated-->
+    <div data-selected=""></div>
+    <!-- div.purple>span.cyan creates a child in div -->
+    <div class="purple"><span class="cyan"></span></div>
+    <!-- header>nav>ul>li*3 with tab it moves to the next li to type -->
+    <header>
+        <nav>
+            <ul>
+                <li>hi</li>
+                <li>bye</li>
+                <li>hibye</li>
+            </ul>
+        </nav>
+    </header>
+    <!-- add text inside of li by header>nav>ul>li*3{testText} (prepopulated) -->
+    <header>
+        <nav>
+            <ul>
+                <li>testText</li>
+                <li>testText</li>
+                <li>testText</li>
+            </ul>
+        </nav>
+    </header>
+    <!-- header>nav>ul>li*3{item $} $the number  we're on-->
+    <header>
+        <nav>
+            <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+            </ul>
+        </nav>
+    </header>
+    <!-- $ can be used for classes -->
+    <header>
+        <nav>
+            <ul>
+                <li class="class-1">item 1</li>
+                <li class="class-2">item 2</li>
+                <li class="class-3">item 3</li>
+            </ul>
+        </nav>
+    </header>
+    <!-- $$ will zero-pad our number header>nav>ul>li*3.class-${item $$} -->
+    <header>
+        <nav>
+            <ul>
+                <li class="class-1">item 01</li>
+                <li class="class-2">item 02</li>
+                <li class="class-3">item 03</li>
+            </ul>
+        </nav>
+    </header>
+    <!-- create siblings header+main+footer-->
+    <header></header>
+    <main></main>
+    <footer></footer>
+    <!-- header>nav+main+footer everything child of header-->
+    <header>
+        <nav></nav>
+        <main></main>
+        <footer></footer>
+    </header>
+    <!-- ^ climb up and exit header>nav^main+footer -->
+    <header>
+        <nav></nav>
+    </header>
+    <main></main>
+    <footer></footer>
+    <!-- grouping char (header>nav)+main+footer-->
+    <header>
+        <nav></nav>
+    </header>
+    <main></main>
+    <footer></footer>
+
+    <!-- practice (header>h2{heading}+nav>ol>li*5>a{link$})+main+footer || header>h2{heading}+nav>ol>li*5>a{link$}^^^^main+footer -->
+    <header>
+        <h2>heading</h2>
+        <nav>
+            <ol>
+                <li><a href="">link1</a></li>
+                <li><a href="">link2</a></li>
+                <li><a href="">link3</a></li>
+                <li><a href="">link4</a></li>
+                <li><a href="">link5</a></li>
+            </ol>
+        </nav>
+    </header>
+    <main></main>
+    <footer></footer>
+    <!-- form form:post>(.group>label+input:text)+(.group>label+input:number)-->
+    <form action="" method="post">
+        <div class="group"><label for=""></label><input type="text" name="" id=""></div>
+        <div class="group"><label for=""></label><input type="number" name="" id=""></div>
+    </form>
+</body>
+</html>
