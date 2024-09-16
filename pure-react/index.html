@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello React!</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- include react manually -->
+    <!-- core of react like components and state -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!-- rendering layer -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script>
+      function App() {
+        // const time = new Date().toLocaleTimeString();
+        // state to update time every sec
+        const [time, setTime] = React.useState(new Date().toLocaleTimeString());
+        // effect
+        React.useEffect(function () {
+          setInterval(function () {
+            setTime(new Date().toLocaleTimeString());
+          }, 1000);
+        }, []);
+        // React comes from the 1st script
+        // name of html element,props,child of element
+        return React.createElement("header", null, `Hello React! It's ${time}`);
+      }
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(React.createElement(App));
+    </script>
+  </body>
+</html>
