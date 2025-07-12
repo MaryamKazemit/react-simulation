@@ -1,0 +1,173 @@
+body {
+  background-color: #f7f7fa;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+header {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.card {
+  border-radius: 32px;
+  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.04);
+  background: #fff;
+  border: none;
+}
+
+.bg-pattern {
+  background: linear-gradient(
+      0deg,
+      rgba(96, 159, 255, 0.02),
+      rgba(96, 159, 255, 0.02)
+    ),
+    url("./assets/img/bg-pattern.png");
+  background-repeat: repeat;
+  background-size: auto;
+  background-attachment: fixed;
+}
+
+.fab-center-bottom {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 56px;
+  height: 56px;
+  font-size: 32px;
+  border-radius: 50%;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-underline {
+  border: none;
+  border-bottom: 2px solid #cfd8dc;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+  transition: border-color 0.2s;
+  background: transparent;
+  font-size: 18px;
+  padding-left: 0;
+}
+
+.input-underline:focus {
+  border-bottom: 2px solid #609fff;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.text-color-1 {
+  color: #545454;
+}
+/* fs */
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-24 {
+  font-size: 24px;
+}
+
+.fs-30 {
+  font-size: 30px;
+}
+
+.fs-32 {
+  font-size: 32px;
+}
+
+.fs-44 {
+  font-size: 44px;
+}
+
+/* checkbox */
+.circular-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 2px solid #b0b4b9;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  position: relative;
+  margin-right: 10px;
+}
+
+.circular-checkbox:checked {
+  border-color: #3ef520;
+  background: #3ef520;
+}
+
+.circular-checkbox::after {
+  content: "";
+  display: none;
+}
+
+.circular-checkbox:checked::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url('data:image/svg+xml;utf8,<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 7.5L6 9.5L10 5.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* can be put inside each component relative css */
+.w-56 {
+  width: 56px;
+}
+
+.h-56 {
+  height: 56px;
+}
+
+.min-h-480 {
+  min-height: 480px;
+}
+
+.max-w-800 {
+  max-width: 800px;
+}
+
+.min-w-100 {
+  min-width: 100px;
+}
+
+.ls-03em {
+  letter-spacing: 0.03em;
+}
+
+.mt-2px {
+  margin-top: 2px;
+}
+
+.mt-6px {
+  margin-top: 6.5px;
+}
+
+/* toast */
+.Toastify__toast {
+  justify-content: unset !important;
+}
